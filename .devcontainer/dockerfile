@@ -1,0 +1,42 @@
+FROM ubuntu:22.04
+
+### PACKAGES ###
+
+RUN apt-get update && apt-get install -y \
+    libfmt-dev \
+    libmetis-dev \
+    libopenmpi-dev \
+    libalberta-dev \
+    libparmetis-dev \
+    libsuitesparse-dev \
+    git \
+    curl \
+    cmake \
+    g++ >=13 \
+    pkg-config
+
+### DUNE / AMDIS ###
+
+RUN mkdir /dune && \
+    cd /dune && \
+    git clone https://gitlab.dune-project.org/core/dune-common && \
+    git clone https://gitlab.dune-project.org/core/dune-geometry && \
+    git clone https://gitlab.dune-project.org/core/dune-grid && \
+    git clone https://gitlab.dune-project.org/core/dune-istl && \
+    git clone https://gitlab.dune-project.org/core/dune-localfunctions && \
+    git clone https://gitlab.dune-project.org/staging/dune-functions && \
+    git clone https://gitlab.dune-project.org/staging/dune-typetree && \
+    git clone https://gitlab.dune-project.org/staging/dune-uggrid && \
+    git clone https://gitlab.com/amdis/amdis.git amdis
+
+RUN cd /dune && \
+    export CMAKE_FLAGS="-DCMAKE_BUILD_TYPE=RelWithDebInfo" && \
+    export MAKE_FLAGS="-j4" && \
+    dune-common/bin/dunecontrol all
+
+### Python Setup ###
+
+RUN mkdir /hatch
+RUN curl -L https://github.com/pypa/hatch/releases/download/hatch-v1.9.1/hatch-1.9.1-x86_64-unknown-linux-gnu.tar.gz >> /hatch/hatch.tar.gz
+RUN tar -xvzf /hatch/hatch.tar.gz -C /hatch
+RUN ln /hatch/hatch-1.9.1-x86_64-unknown-linux-gnu /usr/bin/hatch

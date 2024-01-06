@@ -1,0 +1,10 @@
+################################
+# Dune module information file #
+################################
+
+Module: bio_condensates
+Version: 1
+Maintainer: maromei@proton.me
+
+Depends: amdis dune-common dune-geometry dune-localfunctions dune-uggrid dune-grid dune-istl dune-typetree dune-functions
+# Suggests: add additional optional dune modules here

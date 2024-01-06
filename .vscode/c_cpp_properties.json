@@ -1,0 +1,29 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${default}",
+                "/usr/bin/",
+                "/dune/amdis",
+                "/dune/amdis/amdis",
+                "/dune/amdis/build-cmake",
+                "/dune/amdis/build-cmake/include",
+                "/dune/dune-functions",
+                "/dune/dune-typetree",
+                "/dune/dune-localfunctions",
+                "/dune/dune-geometry",
+                "/dune/dune-istl",
+                "/dune/dune-uggrid/dune/uggrid",
+                "/dune/dune-uggrid",
+                "/dune/dune-common",
+                "/dune/dune-grid"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c17",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}

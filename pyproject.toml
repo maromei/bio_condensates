@@ -1,0 +1,79 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "bio_condensates"
+description = ""
+readme = "README.md"
+requires-python = ">=3.10"
+keywords = []
+authors = [
+  { name = "maromei", email = "maromei@proton.me" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = [
+  "numpy",
+  "pandas",
+  "matplotlib",
+  "ipykernel"
+]
+dynamic = ["version"]
+
+[project.urls]
+Documentation = "https://github.com/maromei/bio_condensates#readme"
+Issues = "https://github.com/maromei/bio_condensates/issues"
+Source = "https://github.com/maromei/bio_condensates"
+
+[tool.hatch.version]
+path = "src/__about__.py"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+#####################
+### ENV - DEFAULT ###
+#####################
+
+[tool.hatch.envs.default]
+
+[tool.hatch.envs.default.scripts]
+
+[tool.hatch.envs.default.env-vars]
+
+###################
+### ENV - BUILD ###
+###################
+
+[tool.hatch.envs.build]
+dependencies = [
+  "GitPython"
+]
+
+[tool.hatch.envs.build.scripts]
+write_version = "python scripts/write_version_to_file.py"
+
+[tool.hatch.envs.build.env-vars]
+
+##################
+### ENV - DOCS ###
+##################
+
+[tool.hatch.envs.docs]
+extra-dependencies = [
+  "sphinx",
+  "sphinx-autobuild",
+  "myst-parser",
+  "furo",
+  "breathe",
+  "sphinxcontrib-bibtex"
+]
+
+[tool.hatch.envs.docs.scripts]
+serve = "sphinx-autobuild docs/sphinx/source docs/sphinx/build/html"
+clean = "cd docs/sphinx/ && make clean"
+doxygen = "cd docs/doxygen && doxygen"
