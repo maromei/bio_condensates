@@ -36,6 +36,10 @@ RUN cd /dune && \
 
 ### Python Setup ###
 
+RUN apt-get update && apt-get install -y python3.11
+RUN ln /usr/bin/python3.11 /usr/bin/python
+RUN ln /usr/bin/python3.11 /usr/bin/python3
+
 RUN mkdir /hatch
 RUN curl -L https://github.com/pypa/hatch/releases/download/hatch-v1.9.1/hatch-1.9.1-x86_64-unknown-linux-gnu.tar.gz >> /hatch/hatch.tar.gz
 RUN tar -xvzf /hatch/hatch.tar.gz -C /hatch
