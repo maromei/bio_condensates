@@ -5,7 +5,12 @@ if [[ -z "$1" ]]; then
     exit -1
 fi
 
+if [[ -z "$2" ]]; then
+    echo "You need to supply a script an init file when starting the container."
+    exit -1
+fi
+
 export DUNE_CONTROL_PATH=/dune/amdis:/dune
 /dune/dune-common/bin/dunecontrol --current all
 
-build-cmake/src/$1 init/$1.dat
+build-cmake/src/$1 $2
