@@ -39,4 +39,11 @@ WORKDIR /bio_condensates
 
 COPY . .
 
+# We remove the build directories to ignore CMakeCache.txt file clashes, as
+# cmake will complain that the cache was generated in a different directory.
+RUN rm -r build && rm -r build-cmake
+
+RUN chown -R 777 .
+RUN chmod +x scripts/run.sh
+
 ENTRYPOINT ["scripts/run.sh"]
