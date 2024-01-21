@@ -103,6 +103,7 @@ $$
 
 Here technically not necessary to split $K$ and $\mu$, but it will be once we add the curvature part.
 
+```math
 $$
 \begin{bmatrix}
     \frac{1}{\tau} + \gamma \left( D^x_n \partial_x + D^y_n \partial_y \right) &
@@ -148,6 +149,7 @@ $$
     0
 \end{bmatrix}
 $$
+```
 
 Additionally for the weak form:
 
