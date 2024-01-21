@@ -5,6 +5,7 @@ chMesh->global refinements: 10
 
 parameters->mobility: 1.0
 parameters->epsilon:  0.3
+parameters->initType: singleBubble
 
 refinmenet->initial:   15
 refinement->interface: 17
