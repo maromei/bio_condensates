@@ -105,39 +105,38 @@ Here technically not necessary to split $K$ and $\mu$, but it will be once we ad
 
 $$
 \begin{bmatrix}
-	\frac{1}{\tau} + \gamma \left( D^x_n \partial_x + D^y_n \partial_y \right) & % phi
-	- \nabla^2 & % K
-	0 & 0 & 0 & 0 \\ % mu D Dx Dy
-	- \frac{\lambda}{\varepsilon} W^\prime (\phi_n) & % phi
-	1 & % K
-	- M & % mu
-	0 & 0 & 0 \\ % D Dx Dy
-	- \frac{1}{\varepsilon} W^{\prime\prime}(\phi_n) & % phi
-	0 & % K
-	1 & % mu
-	\varepsilon & % D
-	0 & 0 \\ % Dx Dy
-	- \nabla^2 & % phi
-	0 & 0 & % K mu
-	1 & % D
-	0 & 0 \\ % Dx Dy
-	0 & 0 & 0 & % phi K mu
-	- \partial_x & % D
-	1 & % Dx
-	0 \\ % Dy
-	0 & 0 & 0 & % phi K mu
-	- \partial_y & % D
-	0 & % Dx
-	1 \\ % Dy
-
+	\frac{1}{\tau} + \gamma \left( D^x_n \partial_x + D^y_n \partial_y \right) &
+	- \nabla^2 &
+	0 & 0 & 0 & 0 \\
+	- \frac{\lambda}{\varepsilon} W^\prime (\phi_n) &
+	1 &
+	- M &
+	0 & 0 & 0 \\
+	- \frac{1}{\varepsilon} W^{\prime\prime}(\phi_n) &
+	0 &
+	1 &
+	\varepsilon &
+	0 & 0 \\
+	- \nabla^2 &
+	0 & 0 &
+	1 &
+	0 & 0 \\
+	0 & 0 & 0 &
+	- \partial_x &
+	1 &
+	0 \\
+	0 & 0 & 0 &
+	- \partial_y &
+	0 &
+	1 \\
 \end{bmatrix}
 \begin{bmatrix}
-	\phi_{n+1} \\ % phi
-	K_{n+1} \\    % K
-	\mu_{n+1} \\  % mu
-	D_{n+1} \\    % D
-	D^x_{n+1} \\  % Dx
-	D^y_{n+1}     % Dy
+	\phi_{n+1} \\
+	K_{n+1} \\
+	\mu_{n+1} \\
+	D_{n+1} \\
+	D^x_{n+1} \\
+	D^y_{n+1}
 \end{bmatrix}
 =
 \begin{bmatrix}
