@@ -178,6 +178,15 @@ namespace AMDiS::Bio_condensates {
 
         }
 
+        auto uniformAvgDensity(double avgDensity) {
+
+            auto init = [avgDensity](auto const& x) {
+                return avgDensity;
+            };
+
+            return init;
+        }
+
         template <typename T>
         void initilizeWithType(std::string type, double eps, T phi) {
 
@@ -185,6 +194,8 @@ namespace AMDiS::Bio_condensates {
                 phi << Initializer::bigBubble(eps);
             } else if (type == "singleBubble") {
                 phi << Initializer::defaultInitCircle(eps);
+            } else if (type == "uniformAvgDensity") {
+                phi << Initializer::uniformAvgDensity(eps);
             } else {
                 throw std::runtime_error("Invalid init type.");
             }
