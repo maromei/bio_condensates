@@ -50,5 +50,5 @@ docker run \
     --name=$dockername \
     -v $output_dir:/bio_condensates/output \
     $dockername:latest \
-    $sim_name_to_run
+    $sim_name_to_run \
     $init_file
