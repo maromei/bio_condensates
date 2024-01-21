@@ -4,10 +4,10 @@ Energy Functional:
 
 $$
 \begin{equation}
-	F = \int \mathrm{d}x \left[
-		\frac{\varepsilon}{2} |\nabla \phi|^2 +
-		\frac{1}{\varepsilon} W(\phi)
-	\right]
+    F = \int \mathrm{d}x \left[
+        \frac{\varepsilon}{2} |\nabla \phi|^2 +
+        \frac{1}{\varepsilon} W(\phi)
+    \right]
 \end{equation}
 $$
 
@@ -15,7 +15,7 @@ with
 
 $$
 \begin{equation}
-	W(\phi) = 18 \phi^2 \left( 1 - \phi \right)^2
+    W(\phi) = 18 \phi^2 \left( 1 - \phi \right)^2
 \end{equation}
 $$
 
@@ -27,9 +27,9 @@ $\varepsilon \rightarrow 0$:
 
 $$
 \begin{gathered}
-	\varepsilon^{???} \partial_t \phi = - \frac{\delta F}{\delta \phi} \\
-	\varepsilon \rightarrow 0: \qquad
-	V = -H
+    \varepsilon^{???} \partial_t \phi = - \frac{\delta F}{\delta \phi} \\
+    \varepsilon \rightarrow 0: \qquad
+    V = -H
 \end{gathered}
 $$
 
@@ -54,7 +54,7 @@ flow.
 From [Link to seminar video](https://www.newton.ac.uk/seminar/40850/)
 $$
 \begin{equation}
-	\partial_t \phi = M \nabla^2 \frac{\delta F}{\delta \phi} + R(\phi) + k (\nabla \phi)^4 H(\phi)
+    \partial_t \phi = M \nabla^2 \frac{\delta F}{\delta \phi} + R(\phi) + k (\nabla \phi)^4 H(\phi)
 \end{equation}
 $$
 
@@ -62,7 +62,7 @@ Where $H(\phi)$ is related to the curvature. They chose:
 
 $$
 \begin{equation}
-	- \nabla \cdot \frac{\nabla \phi}{|\nabla \phi|}
+    - \nabla \cdot \frac{\nabla \phi}{|\nabla \phi|}
 \end{equation}
 $$
 
@@ -72,7 +72,7 @@ We also ignore the $R(\phi)$ part, as they use it to model reactions between two
 
 $$
 \begin{equation}
-	\partial_t \phi = M \nabla^2 \frac{\delta F}{\delta \phi} + \frac{k}{\varepsilon} W(\phi) \frac{\delta F}{\delta \phi}
+    \partial_t \phi = M \nabla^2 \frac{\delta F}{\delta \phi} + \frac{k}{\varepsilon} W(\phi) \frac{\delta F}{\delta \phi}
 \end{equation}
 $$
 
@@ -82,7 +82,7 @@ Original equation:
 
 $$
 \begin{equation}
-	\partial_t \phi = \nabla^2 \frac{\delta F}{\delta \phi} + \lambda \nabla^2 \left( \nabla \phi \right)^2 - \gamma \nabla \left[ \nabla^2 \phi \cdot \nabla \phi \right]
+    \partial_t \phi = \nabla^2 \frac{\delta F}{\delta \phi} + \lambda \nabla^2 \left( \nabla \phi \right)^2 - \gamma \nabla \left[ \nabla^2 \phi \cdot \nabla \phi \right]
 \end{equation}
 $$
 
@@ -92,12 +92,12 @@ into a separate variable. Then we can turn it into $\nabla D \cdot \nabla \phi$.
 
 $$
 \begin{aligned}
-	\partial_t \phi &= \nabla^2 K - \gamma \left( D^2 + D^x \partial_x \phi + D^y \phi \right) \\
-	K &= M \mu + \frac{\lambda}{\varepsilon} W(\phi) \\
-	\mu &= \frac{1}{\varepsilon} W^\prime(\phi) - \varepsilon D \\
-	D &= \nabla^2 \phi \\
-	D^x &= \partial_x D \\
-	D^y &= \partial_y D
+    \partial_t \phi &= \nabla^2 K - \gamma \left( D^2 + D^x \partial_x \phi + D^y \phi \right) \\
+    K &= M \mu + \frac{\lambda}{\varepsilon} W(\phi) \\
+    \mu &= \frac{1}{\varepsilon} W^\prime(\phi) - \varepsilon D \\
+    D &= \nabla^2 \phi \\
+    D^x &= \partial_x D \\
+    D^y &= \partial_y D
 \end{aligned}
 $$
 
@@ -105,47 +105,47 @@ Here technically not necessary to split $K$ and $\mu$, but it will be once we ad
 
 $$
 \begin{bmatrix}
-	\frac{1}{\tau} + \gamma \left( D^x_n \partial_x + D^y_n \partial_y \right) &
-	- \nabla^2 &
-	0 & 0 & 0 & 0 \\
-	- \frac{\lambda}{\varepsilon} W^\prime (\phi_n) &
-	1 &
-	- M &
-	0 & 0 & 0 \\
-	- \frac{1}{\varepsilon} W^{\prime\prime}(\phi_n) &
-	0 &
-	1 &
-	\varepsilon &
-	0 & 0 \\
-	- \nabla^2 &
-	0 & 0 &
-	1 &
-	0 & 0 \\
-	0 & 0 & 0 &
-	- \partial_x &
-	1 &
-	0 \\
-	0 & 0 & 0 &
-	- \partial_y &
-	0 &
-	1 \\
+    \frac{1}{\tau} + \gamma \left( D^x_n \partial_x + D^y_n \partial_y \right) &
+    - \nabla^2 &
+    0 & 0 & 0 & 0 \\
+    - \frac{\lambda}{\varepsilon} W^\prime (\phi_n) &
+    1 &
+    - M &
+    0 & 0 & 0 \\
+    - \frac{1}{\varepsilon} W^{\prime\prime}(\phi_n) &
+    0 &
+    1 &
+    \varepsilon &
+    0 & 0 \\
+    - \nabla^2 &
+    0 & 0 &
+    1 &
+    0 & 0 \\
+    0 & 0 & 0 &
+    - \partial_x &
+    1 &
+    0 \\
+    0 & 0 & 0 &
+    - \partial_y &
+    0 &
+    1
 \end{bmatrix}
 \begin{bmatrix}
-	\phi_{n+1} \\
-	K_{n+1} \\
-	\mu_{n+1} \\
-	D_{n+1} \\
-	D^x_{n+1} \\
-	D^y_{n+1}
+    \phi_{n+1} \\
+    K_{n+1} \\
+    \mu_{n+1} \\
+    D_{n+1} \\
+    D^x_{n+1} \\
+    D^y_{n+1}
 \end{bmatrix}
 =
 \begin{bmatrix}
-	\frac{1}{\tau} - \gamma D_n^2 \\
-	\frac{\lambda}{\varepsilon} \left[ W(\phi_n) - W^\prime(\phi_n) \phi_n \right] \\
-	\frac{1}{\varepsilon} \left[ W^\prime(\phi_n) - W^{\prime\prime}(\phi_n)\phi_n \right] \\
-	0 \\
-	0 \\
-	0
+    \frac{1}{\tau} - \gamma D_n^2 \\
+    \frac{\lambda}{\varepsilon} \left[ W(\phi_n) - W^\prime(\phi_n) \phi_n \right] \\
+    \frac{1}{\varepsilon} \left[ W^\prime(\phi_n) - W^{\prime\prime}(\phi_n)\phi_n \right] \\
+    0 \\
+    0 \\
+    0
 \end{bmatrix}
 $$
 
@@ -153,8 +153,8 @@ Additionally for the weak form:
 
 $$
 \begin{aligned}
-	\langle \nabla^2 \phi, v \rangle &= - \langle \nabla \phi, \nabla v \rangle \\
-	\langle \partial_x \phi, v \rangle &= - \langle \phi, \partial_x v \rangle
+    \langle \nabla^2 \phi, v \rangle &= - \langle \nabla \phi, \nabla v \rangle \\
+    \langle \partial_x \phi, v \rangle &= - \langle \phi, \partial_x v \rangle
 \end{aligned}
 $$
 
