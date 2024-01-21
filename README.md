@@ -52,6 +52,7 @@ flow.
 # CH Curvature
 
 From [Link to seminar video](https://www.newton.ac.uk/seminar/40850/)
+
 $$
 \begin{equation}
     \partial_t \phi = M \nabla^2 \frac{\delta F}{\delta \phi} + R(\phi) + k (\nabla \phi)^4 H(\phi)
