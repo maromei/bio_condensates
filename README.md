@@ -105,8 +105,6 @@ Here technically not necessary to split $K$ and $\mu$, but it will be once we ad
 
 $$
 \begin{bmatrix}
-
-	%%% Row 1 %%%
 	\frac{1}{\tau} + \gamma \left( D^x_n \partial_x + D^y_n \partial_y \right) & % phi
 	- \nabla^2 & % K
 	0 & 0 & 0 & 0 \\ % mu D Dx Dy
