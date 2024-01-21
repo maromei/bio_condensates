@@ -8,7 +8,10 @@
 
 #include <dune/grid/albertagrid.hh>
 
+#include <amdis/bio_condensates/Bio_condensates.hpp>
+
 using namespace AMDiS;
+using namespace Bio_condensates;
 
 using Grid = Dune::AlbertaGrid<GRIDDIM, WORLDDIM>;
 using Param = LagrangeBasis<Grid, 1, 1>;
@@ -53,7 +56,7 @@ int main(int argc, char** argv) {
 
     prob.addMatrixOperator(sot(-eps), 1, 0);
     auto linDoubleWellOperator = zot(
-        - 36./eps * (6*pow<2>(phi) - 6*phi + 1)
+        - 1./eps * doubleWellSecondDeriv(phi)
     );
     prob.addMatrixOperator(linDoubleWellOperator, 1, 0);
 
@@ -69,8 +72,8 @@ int main(int argc, char** argv) {
     // ### f_1
 
     auto nonLinDoubleWellOperator = zot(
-        36./eps * (2*pow<3>(phi) - 3*pow<2>(phi) + phi) -
-        36./eps * (6*pow<2>(phi) - 6*phi + 1) * phi
+        1./eps * doubleWellDeriv(phi) -
+        1./eps * doubleWellSecondDeriv(phi) * phi
     );
     prob.addVectorOperator(nonLinDoubleWellOperator, 1);
 
