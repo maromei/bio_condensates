@@ -108,33 +108,23 @@ $$
 	\frac{1}{\tau} + \gamma \left( D^x_n \partial_x + D^y_n \partial_y \right) & % phi
 	- \nabla^2 & % K
 	0 & 0 & 0 & 0 \\ % mu D Dx Dy
-
-	%%% Row 2 %%%
 	- \frac{\lambda}{\varepsilon} W^\prime (\phi_n) & % phi
 	1 & % K
 	- M & % mu
 	0 & 0 & 0 \\ % D Dx Dy
-
-	%%% Row 3 %%%
 	- \frac{1}{\varepsilon} W^{\prime\prime}(\phi_n) & % phi
 	0 & % K
 	1 & % mu
 	\varepsilon & % D
 	0 & 0 \\ % Dx Dy
-
-	%%% Row 4 %%%
 	- \nabla^2 & % phi
 	0 & 0 & % K mu
 	1 & % D
 	0 & 0 \\ % Dx Dy
-
-	%%% Row 5 %%%
 	0 & 0 & 0 & % phi K mu
 	- \partial_x & % D
 	1 & % Dx
 	0 \\ % Dy
-
-	%%% Row 6 %%%
 	0 & 0 & 0 & % phi K mu
 	- \partial_y & % D
 	0 & % Dx
@@ -151,25 +141,12 @@ $$
 \end{bmatrix}
 =
 \begin{bmatrix}
-
-	%%% Row 1 %%%
 	\frac{1}{\tau} - \gamma D_n^2 \\
-
-	%%% Row 2 %%%
 	\frac{\lambda}{\varepsilon} \left[ W(\phi_n) - W^\prime(\phi_n) \phi_n \right] \\
-
-	%%% Row 3 %%%
 	\frac{1}{\varepsilon} \left[ W^\prime(\phi_n) - W^{\prime\prime}(\phi_n)\phi_n \right] \\
-
-	%%% Row 4 %%%
 	0 \\
-
-	%%% Row 5 %%%
 	0 \\
-
-	%%% Row 6 %%%
 	0
-
 \end{bmatrix}
 $$
 
