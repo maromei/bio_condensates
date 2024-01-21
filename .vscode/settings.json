@@ -1,3 +1,9 @@
 {
-    "python.defaultInterpreterPath": "/root/.local/share/hatch/env/virtual/bio-condensates/zk5gmjGF/bio-condensates/bin/python"
+    "python.defaultInterpreterPath": "/root/.local/share/hatch/env/virtual/bio-condensates/zk5gmjGF/bio-condensates/bin/python",
+    "files.associations": {
+        "numbers": "cpp",
+        "cmath": "cpp",
+        "complex": "cpp",
+        "optional": "cpp"
+    }
 }

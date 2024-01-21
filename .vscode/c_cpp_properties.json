@@ -17,7 +17,8 @@
                 "/dune/dune-uggrid/dune/uggrid",
                 "/dune/dune-uggrid",
                 "/dune/dune-common",
-                "/dune/dune-grid"
+                "/dune/dune-grid",
+                "/workspaces/bio_condensates"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",
