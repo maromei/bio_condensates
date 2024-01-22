@@ -162,3 +162,28 @@ $$
 $$
 
 for dirichlet and periodic BC.
+
+# Animations
+
+## CH Curve
+
+$\kappa=50$ until $t=0.09$
+
+![](results/ch_curve_kappa50.png)
+![](results/ch_curve_kappa50.gif)
+
+$\kappa=25$ until $t=0.386$
+
+![](results/ch_curve_kappa25.png)
+![](results/ch_curve_kappa25.gif)
+
+$\kappa=10$ until $t=2.6$
+
+![](results/ch_curve_kappa10.png)
+![](results/ch_curve_kappa10.gif)
+
+## CH B+
+
+- all constants $=1$ --> started to equilibriate
+- constant avg. density $=0.5$ everywhere -> nothing happend
+    - may be due to coarse grid
